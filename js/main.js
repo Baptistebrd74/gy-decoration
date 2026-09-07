@@ -28,45 +28,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// ===== COMPTEUR ANIMATION =====
-function animateCounters() {
-  const counters = document.querySelectorAll('.number[data-count]');
-
-  counters.forEach(counter => {
-    const target = parseInt(counter.getAttribute('data-count'));
-    const duration = 2000;
-    const step = target / (duration / 16);
-    let current = 0;
-
-    const updateCounter = () => {
-      current += step;
-      if (current < target) {
-        counter.textContent = Math.floor(current);
-        requestAnimationFrame(updateCounter);
-      } else {
-        counter.textContent = target;
-      }
-    };
-
-    updateCounter();
-  });
-}
-
-// Observer pour lancer l'animation quand les compteurs sont visibles
-const statsObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      animateCounters();
-      statsObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
-
-const statsSection = document.querySelector('.about-stats');
-if (statsSection) {
-  statsObserver.observe(statsSection);
-}
-
 // ===== ANIMATION AU SCROLL =====
 const fadeElements = document.querySelectorAll('.service-card, .gallery-item, .about-content, .contact-wrapper');
 

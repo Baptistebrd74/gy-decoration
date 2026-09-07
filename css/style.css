@@ -49,7 +49,6 @@ h1, h2, h3,
 .about-text h2,
 .service-card h3,
 .gallery-overlay h3,
-.stat .number,
 .contact-info h3,
 .contact-form h3 {
   font-family: 'Fraunces', serif;
@@ -509,29 +508,6 @@ img {
   font-size: 1.02rem;
 }
 
-.about-stats {
-  display: flex;
-  gap: 40px;
-  margin-top: 28px;
-}
-
-.stat {
-  text-align: center;
-}
-
-.stat .number {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--blue-700);
-  display: block;
-}
-
-.stat .label {
-  font-size: 0.85rem;
-  color: var(--gray-600);
-  margin-top: 4px;
-}
-
 /* ===== CONTACT ===== */
 .contact-wrapper {
   display: grid;
@@ -817,10 +793,6 @@ img {
 
   .gallery-grid {
     grid-template-columns: 1fr;
-  }
-
-  .about-stats {
-    justify-content: center;
   }
 
   .form-row {
