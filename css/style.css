@@ -32,6 +32,7 @@
 
 html {
   scroll-behavior: smooth;
+  overscroll-behavior-y: none;
 }
 
 body {
@@ -39,6 +40,7 @@ body {
   color: var(--gray-800);
   line-height: 1.6;
   background: var(--blue-50);
+  overscroll-behavior-y: none;
 }
 
 h1, h2, h3,
