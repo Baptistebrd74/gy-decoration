@@ -181,6 +181,8 @@ if (contactForm) {
             <p style="color: var(--gray-600);">Votre demande de devis a bien été envoyée.<br>Nous vous recontacterons sous 24h.</p>
           </div>
         `;
+        // Le message peut se retrouver hors écran sur un grand formulaire : on le ramène en vue
+        contactForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
