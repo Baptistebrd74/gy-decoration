@@ -6,25 +6,20 @@
     <title>GY-Décoration | Peintre intérieur à Annecy</title>
     <meta
       name="description"
-      content="GY-Décoration, votre peintre intérieur à Annecy. Yann Grotte vous accompagne dans tous vos projets de peinture et décoration d'intérieur."
+      content="GY-Décoration, votre peintre intérieur à Annecy. Yann Grotte vous accompagne dans tous vos projets de peinture intérieure."
     />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="GY-Décoration | Peintre intérieur à Annecy" />
-    <meta property="og:description" content="GY-Décoration, votre peintre intérieur à Annecy. Yann Grotte vous accompagne dans tous vos projets de peinture et décoration d'intérieur." />
-    <meta property="og:image" content="https://gy-decoration.fr/img/logo-gy.png" />
+    <meta property="og:description" content="GY-Décoration, votre peintre intérieur à Annecy. Yann Grotte vous accompagne dans tous vos projets de peinture intérieure." />
+    <meta property="og:image" content="https://gy-decoration.fr/img/og-image.jpg" />
     <meta property="og:url" content="https://gy-decoration.fr/index.html" />
     <meta property="og:locale" content="fr_FR" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="GY-Décoration | Peintre intérieur à Annecy" />
-    <meta name="twitter:description" content="GY-Décoration, votre peintre intérieur à Annecy. Yann Grotte vous accompagne dans tous vos projets de peinture et décoration d'intérieur." />
-    <meta name="twitter:image" content="https://gy-decoration.fr/img/logo-gy.png" />
+    <meta name="twitter:description" content="GY-Décoration, votre peintre intérieur à Annecy. Yann Grotte vous accompagne dans tous vos projets de peinture intérieure." />
+    <meta name="twitter:image" content="https://gy-decoration.fr/img/og-image.jpg" />
     <link rel="canonical" href="https://gy-decoration.fr/index.html" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="img/logo-gy.png" type="image/png" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -75,11 +70,14 @@
         </div>
         <div class="hero-image">
           <img
-            src="https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-            alt="Peintre en action - GY-Décoration"
-            class="placeholder-img"
-            style="object-fit: cover"
+            src="img/realisations/sejour-bleu-canard.webp"
+            srcset="img/realisations/sejour-bleu-canard-sm.webp 800w, img/realisations/sejour-bleu-canard.webp 1600w"
+            sizes="(max-width: 968px) 100vw, 560px"
+            alt="Séjour repeint en bleu canard par GY-Décoration"
+            width="1600" height="1067"
+            fetchpriority="high"
           />
+          <span class="hero-image-caption">Séjour bleu canard · Haute-Savoie</span>
         </div>
       </div>
     </section>
@@ -91,11 +89,11 @@
           <h2>Nos services</h2>
           <p>
             Des prestations complètes pour tous vos projets de peinture
-            intérieure et décoration
+            intérieure
           </p>
           <div class="line"></div>
         </div>
-        <div class="services-grid">
+        <div class="services-grid services-grid-4">
           <div class="service-card">
             <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-9"/><path d="M10 20v-6h4v6"/></svg></div>
             <h3>Peinture intérieure</h3>
@@ -110,14 +108,6 @@
             <p>
               Conseil et application de teintes pour créer des ambiances uniques
               dans chaque pièce de votre intérieur.
-            </p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><path d="M12 3c.6 3.2 2 4.6 5 5-3 .4-4.4 1.8-5 5-.6-3.2-2-4.6-5-5 3-.4 4.4-1.8 5-5Z"/><path d="M19 15c.2 1.2.8 1.8 2 2-1.2.2-1.8.8-2 2-.2-1.2-.8-1.8-2-2 1.2-.2 1.8-.8 2-2Z"/></svg></div>
-            <h3>Décoration intérieure</h3>
-            <p>
-              Finitions décoratives, effets de matière et pose de papier peint
-              pour sublimer vos espaces.
             </p>
           </div>
           <div class="service-card">
@@ -152,42 +142,27 @@
           <div class="line"></div>
         </div>
         <div class="gallery-grid">
-          <div class="gallery-item">
-            <img
-              src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-              alt="Appartement centre-ville"
-              class="placeholder-img"
-              style="object-fit: cover"
-            />
+          <a href="img/realisations/salon-coiffure.webp" class="gallery-item" data-cat="pro">
+            <img src="img/realisations/salon-coiffure-sm.webp" alt="Salon de coiffure – peinture d'un local commercial" width="800" height="600" loading="lazy" decoding="async" />
             <div class="gallery-overlay">
-              <h3>Appartement centre-ville</h3>
-              <p>Peinture intérieure complète</p>
+              <h3>Salon de coiffure</h3>
+              <p>Peinture d'un local commercial</p>
             </div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.pexels.com/photos/3316922/pexels-photo-3316922.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-              alt="Maison individuelle"
-              class="placeholder-img"
-              style="object-fit: cover"
-            />
+          </a>
+          <a href="img/realisations/papier-peint-feuillage.webp" class="gallery-item" data-cat="deco">
+            <img src="img/realisations/papier-peint-feuillage-sm.webp" alt="Chambre feuillage – papier peint et peinture moutarde" width="800" height="533" loading="lazy" decoding="async" />
             <div class="gallery-overlay">
-              <h3>Maison individuelle</h3>
-              <p>Peinture séjour et chambres</p>
+              <h3>Chambre feuillage</h3>
+              <p>Papier peint et peinture moutarde</p>
             </div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.pexels.com/photos/6035357/pexels-photo-6035357.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-              alt="Local commercial"
-              class="placeholder-img"
-              style="object-fit: cover"
-            />
+          </a>
+          <a href="img/realisations/mezzanine-bleu-nuit.webp" class="gallery-item" data-cat="peinture">
+            <img src="img/realisations/mezzanine-bleu-nuit-sm.webp" alt="Mur bleu nuit – mur de caractère sous mezzanine" width="800" height="600" loading="lazy" decoding="async" />
             <div class="gallery-overlay">
-              <h3>Local commercial</h3>
-              <p>Peinture et décoration intérieure</p>
+              <h3>Mur bleu nuit</h3>
+              <p>Mur de caractère sous mezzanine</p>
             </div>
-          </div>
+          </a>
         </div>
         <div style="text-align: center; margin-top: 40px">
           <a href="realisations.html" class="btn btn-outline"
@@ -197,17 +172,36 @@
       </div>
     </section>
 
-    <!-- A PROPOS APERCU -->
+    <!-- AVANT / APRES -->
     <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Avant, après</h2>
+          <p>Faites glisser le curseur pour voir la différence</p>
+          <div class="line"></div>
+        </div>
+        <div class="ba-grid ba-grid-single">
+          <figure class="ba">
+            <div class="ba-frame" style="--pos: 50%">
+              <img src="img/realisations/mur-geometrique-vert.webp" alt="Mur géométrique, après travaux" width="1600" height="1200" loading="lazy" decoding="async" />
+              <img src="img/realisations/mur-geometrique-avant.webp" alt="Mur géométrique, avant travaux" class="ba-before" width="1600" height="1200" loading="lazy" decoding="async" />
+              <span class="ba-tag ba-tag-before">Avant</span>
+              <span class="ba-tag ba-tag-after">Après</span>
+              <span class="ba-handle" aria-hidden="true"></span>
+              <input type="range" min="0" max="100" value="50" class="ba-range" aria-label="Comparer avant et après : Mur géométrique" />
+            </div>
+            <figcaption><strong>Mur géométrique</strong> · du traçage au décor fini</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- A PROPOS APERCU -->
+    <section class="section section-alt">
       <div class="container">
         <div class="about-content">
           <div class="about-image">
-            <img
-              src="https://images.pexels.com/photos/5691471/pexels-photo-5691471.jpeg?auto=compress&cs=tinysrgb&w=600&h=500&fit=crop"
-              alt="Yann Grotte - Peintre"
-              class="placeholder-img"
-              style="object-fit: cover"
-            />
+            <img src="img/realisations/yann-grotte.webp" alt="Yann Grotte, peintre de GY-Décoration, pinceau entre les dents sur un chantier" width="1440" height="1080" loading="lazy" decoding="async" />
           </div>
           <div class="about-text">
             <h2>Yann Grotte, votre artisan peintre</h2>
@@ -221,13 +215,14 @@
               complète, GY-Décoration vous accompagne de la conception à la
               réalisation.
             </p>
+            <a href="a-propos.html" class="btn btn-outline">En savoir plus</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="section section-alt">
+    <section class="section section-cta">
       <div class="container" style="text-align: center">
         <h2
           style="font-size: 2rem; color: var(--blue-900); margin-bottom: 16px"
@@ -261,8 +256,8 @@
               ><img src="img/logo-gy.png" alt=""
             /></a>
             <p>
-              Peintre intérieur à Annecy. Peinture et décoration d'intérieur
-              pour particuliers et professionnels.
+              Peintre intérieur à Annecy. Peinture intérieure pour particuliers
+              et professionnels.
             </p>
           </div>
           <div>
@@ -296,6 +291,17 @@
       </div>
     </footer>
 
+
+    <!-- LIGHTBOX -->
+    <dialog class="lightbox" id="lightbox" aria-label="Photo en grand">
+      <button class="lightbox-close" type="button" aria-label="Fermer">&times;</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Photo précédente">&#8249;</button>
+      <figure>
+        <img src="" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Photo suivante">&#8250;</button>
+    </dialog>
     <script src="js/main.js"></script>
   </body>
 </html>

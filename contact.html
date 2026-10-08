@@ -11,20 +11,15 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Contact | GY-Décoration - Peintre intérieur à Annecy" />
     <meta property="og:description" content="Contactez GY-Décoration pour un devis gratuit. Yann Grotte, peintre intérieur à Annecy, est à votre écoute pour tous vos projets." />
-    <meta property="og:image" content="https://gy-decoration.fr/img/logo-gy.png" />
+    <meta property="og:image" content="https://gy-decoration.fr/img/og-image.jpg" />
     <meta property="og:url" content="https://gy-decoration.fr/contact.html" />
     <meta property="og:locale" content="fr_FR" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Contact | GY-Décoration - Peintre intérieur à Annecy" />
     <meta name="twitter:description" content="Contactez GY-Décoration pour un devis gratuit. Yann Grotte, peintre intérieur à Annecy, est à votre écoute pour tous vos projets." />
-    <meta name="twitter:image" content="https://gy-decoration.fr/img/logo-gy.png" />
+    <meta name="twitter:image" content="https://gy-decoration.fr/img/og-image.jpg" />
     <link rel="canonical" href="https://gy-decoration.fr/contact.html" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="img/logo-gy.png" type="image/png" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -127,16 +122,18 @@
                 border: 1px solid var(--gray-200);
               "
             >
-              <iframe
-                src="https://www.google.com/maps?q=5+rue+des+Allobroges,+74000+Annecy&output=embed"
-                width="100%"
-                height="100%"
-                style="border: 0; display: block"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Localisation de GY-Décoration, 5 rue des Allobroges, Annecy"
-              ></iframe>
+              <!-- Carte chargée seulement au clic : Google Maps dépose des cookies (RGPD) -->
+              <div class="map-consent" id="mapConsent"
+                data-src="https://www.google.com/maps?q=5+rue+des+Allobroges,+74000+Annecy&output=embed"
+                data-title="Localisation de GY-Décoration, 5 rue des Allobroges, Annecy">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                <p>5 rue des Allobroges, 74000 Annecy</p>
+                <button type="button" class="btn btn-outline map-consent-btn">Afficher la carte</button>
+                <small>
+                  La carte est fournie par Google Maps, qui dépose des cookies.
+                  Ou <a href="https://www.google.com/maps/search/?api=1&amp;query=5+rue+des+Allobroges+74000+Annecy" target="_blank" rel="noopener">ouvrir dans Google Maps</a>.
+                </small>
+              </div>
             </div>
           </div>
 
@@ -211,7 +208,6 @@
                 <option value="">-- Sélectionnez un service --</option>
                 <option value="peinture-interieure">Peinture intérieure</option>
                 <option value="mise-en-couleur">Mise en couleur</option>
-                <option value="decoration">Décoration intérieure</option>
                 <option value="preparation">Préparation des supports</option>
                 <option value="rafraichissement">Rafraîchissement</option>
                 <option value="traitement">Traitement des murs</option>
@@ -242,6 +238,13 @@
             >
               * Champs obligatoires. Nous vous répondons sous 24h.
             </p>
+            <p class="form-rgpd">
+              Les informations saisies sont utilisées uniquement par
+              GY-Décoration pour répondre à votre demande de devis. Elles ne
+              sont jamais transmises à des tiers. Vous pouvez y accéder, les
+              rectifier ou les faire supprimer à tout moment :
+              <a href="mentions-legales.html#confidentialite">en savoir plus</a>.
+            </p>
           </form>
         </div>
       </div>
@@ -256,8 +259,8 @@
               ><img src="img/logo-gy.png" alt=""
             /></a>
             <p>
-              Peintre intérieur à Annecy. Peinture et décoration d'intérieur
-              pour particuliers et professionnels.
+              Peintre intérieur à Annecy. Peinture intérieure pour particuliers
+              et professionnels.
             </p>
           </div>
           <div>

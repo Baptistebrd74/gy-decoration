@@ -6,25 +6,20 @@
     <title>Réalisations | GY-Décoration - Peintre intérieur à Annecy</title>
     <meta
       name="description"
-      content="Découvrez les réalisations de GY-Décoration : projets de peinture intérieure et décoration à Annecy et en Haute-Savoie."
+      content="Découvrez les réalisations de GY-Décoration : projets de peinture intérieure à Annecy et en Haute-Savoie."
     />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Réalisations | GY-Décoration - Peintre intérieur à Annecy" />
-    <meta property="og:description" content="Découvrez les réalisations de GY-Décoration : projets de peinture intérieure et décoration à Annecy et en Haute-Savoie." />
-    <meta property="og:image" content="https://gy-decoration.fr/img/logo-gy.png" />
+    <meta property="og:description" content="Découvrez les réalisations de GY-Décoration : projets de peinture intérieure à Annecy et en Haute-Savoie." />
+    <meta property="og:image" content="https://gy-decoration.fr/img/og-image.jpg" />
     <meta property="og:url" content="https://gy-decoration.fr/realisations.html" />
     <meta property="og:locale" content="fr_FR" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Réalisations | GY-Décoration - Peintre intérieur à Annecy" />
-    <meta name="twitter:description" content="Découvrez les réalisations de GY-Décoration : projets de peinture intérieure et décoration à Annecy et en Haute-Savoie." />
-    <meta name="twitter:image" content="https://gy-decoration.fr/img/logo-gy.png" />
+    <meta name="twitter:description" content="Découvrez les réalisations de GY-Décoration : projets de peinture intérieure à Annecy et en Haute-Savoie." />
+    <meta name="twitter:image" content="https://gy-decoration.fr/img/og-image.jpg" />
     <link rel="canonical" href="https://gy-decoration.fr/realisations.html" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="img/logo-gy.png" type="image/png" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -71,121 +66,148 @@
     <!-- GALLERY -->
     <section class="section">
       <div class="container">
+        <div class="filters" role="group" aria-label="Filtrer les réalisations">
+          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Tout</button>
+          <button type="button" class="filter" data-filter="peinture" aria-pressed="false">Peinture</button>
+          <button type="button" class="filter" data-filter="deco" aria-pressed="false">Papier peint &amp; motifs</button>
+          <button type="button" class="filter" data-filter="pro" aria-pressed="false">Professionnels</button>
+        </div>
         <div class="gallery-grid">
-          <div class="gallery-item">
-            <img
-              src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-              alt="Appartement centre-ville"
-              class="placeholder-img"
-              style="object-fit: cover"
-            />
+          <a href="img/realisations/sejour-bleu-canard.webp" class="gallery-item" data-cat="peinture">
+            <img src="img/realisations/sejour-bleu-canard-sm.webp" alt="Séjour bleu canard – peinture murs et plafonds" width="800" height="533" loading="lazy" decoding="async" />
             <div class="gallery-overlay">
-              <h3>Appartement centre-ville</h3>
-              <p>Peinture intérieure complète</p>
+              <h3>Séjour bleu canard</h3>
+              <p>Peinture murs et plafonds</p>
             </div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.pexels.com/photos/3316922/pexels-photo-3316922.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-              alt="Maison individuelle"
-              class="placeholder-img"
-              style="object-fit: cover"
-            />
+          </a>
+          <a href="img/realisations/mur-geometrique-vert.webp" class="gallery-item" data-cat="deco">
+            <img src="img/realisations/mur-geometrique-vert-sm.webp" alt="Mur géométrique – décor peint vert olive" width="800" height="600" loading="lazy" decoding="async" />
             <div class="gallery-overlay">
-              <h3>Maison individuelle</h3>
-              <p>Peinture séjour et chambres</p>
+              <h3>Mur géométrique</h3>
+              <p>Décor peint vert olive</p>
             </div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.pexels.com/photos/6035357/pexels-photo-6035357.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-              alt="Local commercial"
-              class="placeholder-img"
-              style="object-fit: cover"
-            />
+          </a>
+          <a href="img/realisations/papier-peint-feuillage.webp" class="gallery-item" data-cat="deco">
+            <img src="img/realisations/papier-peint-feuillage-sm.webp" alt="Chambre feuillage – papier peint et peinture moutarde" width="800" height="533" loading="lazy" decoding="async" />
             <div class="gallery-overlay">
-              <h3>Local commercial</h3>
-              <p>Peinture et décoration intérieure</p>
+              <h3>Chambre feuillage</h3>
+              <p>Papier peint et peinture moutarde</p>
             </div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.pexels.com/photos/7865621/pexels-photo-7865621.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-              alt="Cuisine moderne"
-              class="placeholder-img"
-              style="object-fit: cover"
-            />
+          </a>
+          <a href="img/realisations/mezzanine-bleu-nuit.webp" class="gallery-item" data-cat="peinture">
+            <img src="img/realisations/mezzanine-bleu-nuit-sm.webp" alt="Mur bleu nuit – mur de caractère sous mezzanine" width="800" height="600" loading="lazy" decoding="async" />
             <div class="gallery-overlay">
-              <h3>Cuisine moderne</h3>
-              <p>Mise en couleur et finitions</p>
+              <h3>Mur bleu nuit</h3>
+              <p>Mur de caractère sous mezzanine</p>
             </div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.pexels.com/photos/994164/pexels-photo-994164.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-              alt="Chambre parentale"
-              class="placeholder-img"
-              style="object-fit: cover"
-            />
+          </a>
+          <a href="img/realisations/salon-coiffure.webp" class="gallery-item" data-cat="pro">
+            <img src="img/realisations/salon-coiffure-sm.webp" alt="Salon de coiffure – peinture d'un local commercial" width="800" height="600" loading="lazy" decoding="async" />
             <div class="gallery-overlay">
-              <h3>Chambre parentale</h3>
-              <p>Peinture et papier peint</p>
+              <h3>Salon de coiffure</h3>
+              <p>Peinture d'un local commercial</p>
             </div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.pexels.com/photos/5798972/pexels-photo-5798972.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-              alt="Salle de bain"
-              class="placeholder-img"
-              style="object-fit: cover"
-            />
+          </a>
+          <a href="img/realisations/mur-rouge-poutres.webp" class="gallery-item" data-cat="peinture">
+            <img src="img/realisations/mur-rouge-poutres-sm.webp" alt="Mur rouge – mise en couleur sous poutres" width="600" height="800" loading="lazy" decoding="async" />
             <div class="gallery-overlay">
-              <h3>Salle de bain</h3>
-              <p>Peinture et traitement humidité</p>
+              <h3>Mur rouge</h3>
+              <p>Mise en couleur sous poutres</p>
             </div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.pexels.com/photos/1669754/pexels-photo-1669754.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-              alt="Bureau professionnel"
-              class="placeholder-img"
-              style="object-fit: cover"
-            />
+          </a>
+          <a href="img/realisations/papier-peint-matiere.webp" class="gallery-item" data-cat="deco">
+            <img src="img/realisations/papier-peint-matiere-sm.webp" alt="Mur à effet matière – pose de papier peint texturé" width="800" height="600" loading="lazy" decoding="async" />
             <div class="gallery-overlay">
-              <h3>Bureau professionnel</h3>
+              <h3>Mur à effet matière</h3>
+              <p>Pose de papier peint texturé</p>
+            </div>
+          </a>
+          <a href="img/realisations/escalier-soubassement-vert.webp" class="gallery-item" data-cat="peinture">
+            <img src="img/realisations/escalier-soubassement-vert-sm.webp" alt="Montée d'escalier – soubassement peint vert olive" width="800" height="600" loading="lazy" decoding="async" />
+            <div class="gallery-overlay">
+              <h3>Montée d'escalier</h3>
+              <p>Soubassement peint vert olive</p>
+            </div>
+          </a>
+          <a href="img/realisations/chambre-terracotta.webp" class="gallery-item" data-cat="peinture">
+            <img src="img/realisations/chambre-terracotta-sm.webp" alt="Chambre terracotta – peinture murs et plafond" width="800" height="600" loading="lazy" decoding="async" />
+            <div class="gallery-overlay">
+              <h3>Chambre terracotta</h3>
+              <p>Peinture murs et plafond</p>
+            </div>
+          </a>
+          <a href="img/realisations/fresque-murale.webp" class="gallery-item" data-cat="deco">
+            <img src="img/realisations/fresque-murale-sm.webp" alt="Fresque murale – décor artistique peint à la main" width="800" height="600" loading="lazy" decoding="async" />
+            <div class="gallery-overlay">
+              <h3>Fresque murale</h3>
+              <p>Décor artistique peint à la main</p>
+            </div>
+          </a>
+          <a href="img/realisations/cuisine-bleu-canard.webp" class="gallery-item" data-cat="peinture">
+            <img src="img/realisations/cuisine-bleu-canard-sm.webp" alt="Cuisine bleu canard – mise en couleur d'une cuisine ouverte" width="600" height="800" loading="lazy" decoding="async" />
+            <div class="gallery-overlay">
+              <h3>Cuisine bleu canard</h3>
+              <p>Mise en couleur d'une cuisine ouverte</p>
+            </div>
+          </a>
+          <a href="img/realisations/wc-bleu-nuit.webp" class="gallery-item" data-cat="peinture">
+            <img src="img/realisations/wc-bleu-nuit-sm.webp" alt="WC bleu nuit – peinture et finitions" width="600" height="800" loading="lazy" decoding="async" />
+            <div class="gallery-overlay">
+              <h3>WC bleu nuit</h3>
               <p>Peinture et finitions</p>
             </div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.pexels.com/photos/5583126/pexels-photo-5583126.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-              alt="Entrée et couloir"
-              class="placeholder-img"
-              style="object-fit: cover"
-            />
+          </a>
+          <a href="img/realisations/decor-geometrique.webp" class="gallery-item" data-cat="deco">
+            <img src="img/realisations/decor-geometrique-sm.webp" alt="Décor géométrique – peinture décorative sur mesure" width="450" height="800" loading="lazy" decoding="async" />
             <div class="gallery-overlay">
-              <h3>Entrée et couloir</h3>
+              <h3>Décor géométrique</h3>
+              <p>Peinture décorative sur mesure</p>
+            </div>
+          </a>
+          <a href="img/realisations/wc-vert-olive.webp" class="gallery-item" data-cat="peinture">
+            <img src="img/realisations/wc-vert-olive-sm.webp" alt="WC vert olive – mise en couleur d'une petite pièce" width="600" height="800" loading="lazy" decoding="async" />
+            <div class="gallery-overlay">
+              <h3>WC vert olive</h3>
+              <p>Mise en couleur d'une petite pièce</p>
+            </div>
+          </a>
+          <a href="img/realisations/sejour-poutres-apres.webp" class="gallery-item" data-cat="peinture">
+            <img src="img/realisations/sejour-poutres-apres-sm.webp" alt="Séjour à poutres – rafraîchissement complet" width="800" height="600" loading="lazy" decoding="async" />
+            <div class="gallery-overlay">
+              <h3>Séjour à poutres</h3>
               <p>Rafraîchissement complet</p>
             </div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-              alt="Salon contemporain"
-              class="placeholder-img"
-              style="object-fit: cover"
-            />
-            <div class="gallery-overlay">
-              <h3>Salon contemporain</h3>
-              <p>Décoration et effets de matière</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVANT / APRES -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Avant, après</h2>
+          <p>Faites glisser le curseur pour comparer</p>
+          <div class="line"></div>
+        </div>
+        <div class="ba-grid ba-grid-single">
+          <figure class="ba">
+            <div class="ba-frame" style="--pos: 50%">
+              <img src="img/realisations/mur-geometrique-vert.webp" alt="Mur géométrique, après travaux" width="1600" height="1200" loading="lazy" decoding="async" />
+              <img src="img/realisations/mur-geometrique-avant.webp" alt="Mur géométrique, avant travaux" class="ba-before" width="1600" height="1200" loading="lazy" decoding="async" />
+              <span class="ba-tag ba-tag-before">Avant</span>
+              <span class="ba-tag ba-tag-after">Après</span>
+              <span class="ba-handle" aria-hidden="true"></span>
+              <input type="range" min="0" max="100" value="50" class="ba-range" aria-label="Comparer avant et après : Mur géométrique" />
             </div>
-          </div>
+            <figcaption><strong>Mur géométrique</strong> · du traçage au décor fini</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="section section-alt">
+    <section class="section section-cta">
       <div class="container" style="text-align: center">
         <h2
           style="font-size: 2rem; color: var(--blue-900); margin-bottom: 16px"
@@ -219,8 +241,8 @@
               ><img src="img/logo-gy.png" alt=""
             /></a>
             <p>
-              Peintre intérieur à Annecy. Peinture et décoration d'intérieur
-              pour particuliers et professionnels.
+              Peintre intérieur à Annecy. Peinture intérieure pour particuliers
+              et professionnels.
             </p>
           </div>
           <div>
@@ -254,6 +276,17 @@
       </div>
     </footer>
 
+
+    <!-- LIGHTBOX -->
+    <dialog class="lightbox" id="lightbox" aria-label="Photo en grand">
+      <button class="lightbox-close" type="button" aria-label="Fermer">&times;</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Photo précédente">&#8249;</button>
+      <figure>
+        <img src="" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Photo suivante">&#8250;</button>
+    </dialog>
     <script src="js/main.js"></script>
   </body>
 </html>

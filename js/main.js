@@ -29,7 +29,7 @@ window.addEventListener('scroll', () => {
 });
 
 // ===== ANIMATION AU SCROLL =====
-const fadeElements = document.querySelectorAll('.service-card, .gallery-item, .about-content, .contact-wrapper');
+const fadeElements = document.querySelectorAll('.service-card, .gallery-item, .about-content, .contact-wrapper, .ba');
 
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -47,6 +47,97 @@ fadeElements.forEach(el => {
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   fadeObserver.observe(el);
 });
+
+// ===== FILTRES REALISATIONS =====
+const filterButtons = document.querySelectorAll('.filter');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const filtre = button.dataset.filter;
+
+    filterButtons.forEach(b => {
+      b.classList.toggle('is-active', b === button);
+      b.setAttribute('aria-pressed', b === button);
+    });
+
+    galleryItems.forEach(item => {
+      item.classList.toggle('is-hidden', filtre !== 'all' && item.dataset.cat !== filtre);
+    });
+  });
+});
+
+// ===== AVANT / APRES =====
+document.querySelectorAll('.ba-frame').forEach(frame => {
+  const range = frame.querySelector('.ba-range');
+  range.addEventListener('input', () => {
+    frame.style.setProperty('--pos', range.value + '%');
+  });
+});
+
+// ===== LIGHTBOX =====
+const lightbox = document.getElementById('lightbox');
+
+if (lightbox && galleryItems.length) {
+  const lbImg = lightbox.querySelector('img');
+  const lbCaption = lightbox.querySelector('figcaption');
+  let current = 0;
+
+  // On ne navigue qu'entre les photos visibles (filtre actif)
+  const visibles = () => [...galleryItems].filter(item => !item.classList.contains('is-hidden'));
+
+  function afficher(item) {
+    const titre = item.querySelector('h3').textContent;
+    const detail = item.querySelector('.gallery-overlay p').textContent;
+    lbImg.src = item.getAttribute('href');
+    lbImg.alt = item.querySelector('img').alt;
+    lbCaption.innerHTML = `<strong>${titre}</strong>${detail}`;
+    current = visibles().indexOf(item);
+  }
+
+  function decaler(sens) {
+    const liste = visibles();
+    afficher(liste[(current + sens + liste.length) % liste.length]);
+  }
+
+  galleryItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      afficher(item);
+      lightbox.showModal();
+    });
+  });
+
+  lightbox.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+  lightbox.querySelector('.lightbox-prev').addEventListener('click', () => decaler(-1));
+  lightbox.querySelector('.lightbox-next').addEventListener('click', () => decaler(1));
+
+  // Clic en dehors de la photo = fermeture
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) lightbox.close();
+  });
+
+  lightbox.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') decaler(-1);
+    if (e.key === 'ArrowRight') decaler(1);
+  });
+}
+
+// ===== CARTE GOOGLE MAPS (chargée seulement au clic, RGPD) =====
+const mapConsent = document.getElementById('mapConsent');
+
+if (mapConsent) {
+  mapConsent.querySelector('.map-consent-btn').addEventListener('click', () => {
+    const iframe = document.createElement('iframe');
+    iframe.src = mapConsent.dataset.src;
+    iframe.title = mapConsent.dataset.title;
+    iframe.loading = 'lazy';
+    iframe.referrerPolicy = 'no-referrer-when-downgrade';
+    iframe.allowFullscreen = true;
+    mapConsent.replaceChildren(iframe);
+    mapConsent.style.padding = '0';
+  });
+}
 
 // ===== FORMULAIRE CONTACT =====
 const contactForm = document.getElementById('contactForm');

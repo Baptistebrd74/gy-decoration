@@ -9,12 +9,7 @@
       content="Mentions légales et politique de confidentialité du site GY-Décoration, Yann Grotte, peintre intérieur à Annecy."
     />
     <meta name="robots" content="noindex, follow" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="img/logo-gy.png" type="image/png" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -78,6 +73,7 @@
             Le site est hébergé par o2switch, société d'hébergement web basée en
             France.<br />
             o2switch SAS - 222 Boulevard Gustave Flaubert, 63000 Clermont-Ferrand<br />
+            Téléphone : 04 44 44 60 40<br />
             Site web : <a href="https://www.o2switch.fr" style="color: var(--blue-700)">o2switch.fr</a>
           </p>
         </div>
@@ -94,27 +90,56 @@
           </p>
         </div>
 
-        <div style="margin-bottom: 40px">
+        <div style="margin-bottom: 40px" id="confidentialite">
           <h2 style="font-size: 1.4rem; color: var(--blue-900); margin-bottom: 12px">
             Politique de confidentialité
           </h2>
           <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: 16px">
-            Les données transmises via le formulaire de contact (nom, prénom,
-            email, téléphone, message) sont utilisées uniquement pour traiter
-            votre demande de devis et vous recontacter. Elles ne sont ni
-            revendues, ni transmises à des tiers, ni utilisées à des fins
-            commerciales autres que le suivi de votre demande.
+            <strong>Responsable du traitement :</strong> Yann Grotte
+            (GY-Décoration), 5 rue des Allobroges, 74000 Annecy –
+            <a href="mailto:gydecoration@gmail.com" style="color: var(--blue-700)">gydecoration@gmail.com</a>.
           </p>
           <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: 16px">
-            Ces données sont conservées le temps nécessaire au traitement de
-            votre demande, puis supprimées si aucune suite n'est donnée.
+            <strong>Données collectées :</strong> uniquement celles que vous
+            saisissez dans le formulaire de contact (nom, prénom, email,
+            téléphone, type de prestation, message). Aucune donnée n'est
+            collectée à votre insu et le site ne comporte pas de compte client.
+          </p>
+          <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: 16px">
+            <strong>Finalité et base légale :</strong> ces données servent
+            uniquement à répondre à votre demande de devis et à vous
+            recontacter à ce sujet. Le traitement repose sur les mesures
+            précontractuelles prises à votre demande (article 6.1.b du RGPD).
+            Elles ne sont jamais vendues, louées ni utilisées pour de la
+            prospection.
+          </p>
+          <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: 16px">
+            <strong>Destinataires :</strong> seul Yann Grotte a accès à vos
+            données. Le formulaire ne les enregistre dans aucune base de
+            données : il les transmet par email via le serveur de l'hébergeur
+            (o2switch, France) vers la messagerie de GY-Décoration (Gmail,
+            Google). Google peut traiter ces données hors de l'Union
+            européenne ; ce transfert est encadré par le cadre de protection
+            des données UE – États-Unis (Data Privacy Framework).
+          </p>
+          <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: 16px">
+            <strong>Durée de conservation :</strong> si votre demande n'est
+            suivie d'aucun devis accepté, les échanges sont supprimés au plus
+            tard 3 ans après le dernier contact. Si vous devenez client, les
+            documents (devis, factures) sont conservés pendant la durée
+            imposée par les obligations comptables (10 ans).
+          </p>
+          <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: 16px">
+            <strong>Vos droits :</strong> vous disposez d'un droit d'accès, de
+            rectification, d'effacement, de limitation, d'opposition et de
+            portabilité de vos données. Pour les exercer, écrivez à
+            <a href="mailto:gydecoration@gmail.com" style="color: var(--blue-700)">gydecoration@gmail.com</a>
+            ; une réponse vous sera apportée sous un mois maximum.
           </p>
           <p style="color: var(--gray-600); line-height: 1.8">
-            Conformément au Règlement Général sur la Protection des Données
-            (RGPD), vous disposez d'un droit d'accès, de rectification et de
-            suppression de vos données personnelles. Pour l'exercer, contactez-nous
-            à l'adresse
-            <a href="mailto:gydecoration@gmail.com" style="color: var(--blue-700)">gydecoration@gmail.com</a>.
+            Si vous estimez, après nous avoir contactés, que vos droits ne sont
+            pas respectés, vous pouvez adresser une réclamation à la CNIL
+            (<a href="https://www.cnil.fr/fr/plaintes" style="color: var(--blue-700)" target="_blank" rel="noopener">cnil.fr/fr/plaintes</a>).
           </p>
         </div>
 
@@ -122,9 +147,16 @@
           <h2 style="font-size: 1.4rem; color: var(--blue-900); margin-bottom: 12px">
             Cookies
           </h2>
+          <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: 16px">
+            Ce site ne dépose aucun cookie : pas de mesure d'audience, pas de
+            traceur publicitaire, pas de bouton de réseau social. Les polices
+            de caractères sont hébergées directement sur le site.
+          </p>
           <p style="color: var(--gray-600); line-height: 1.8">
-            Ce site n'utilise aucun cookie de mesure d'audience ni de traceur
-            publicitaire.
+            Seule exception : la carte de la page Contact est fournie par
+            Google Maps, qui dépose ses propres cookies. Elle n'est donc
+            chargée que si vous cliquez sur « Afficher la carte ». Sans ce
+            clic, aucune connexion n'est établie avec Google.
           </p>
         </div>
       </div>
@@ -139,8 +171,8 @@
               ><img src="img/logo-gy.png" alt=""
             /></a>
             <p>
-              Peintre intérieur à Annecy. Peinture et décoration d'intérieur
-              pour particuliers et professionnels.
+              Peintre intérieur à Annecy. Peinture intérieure pour particuliers
+              et professionnels.
             </p>
           </div>
           <div>

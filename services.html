@@ -11,20 +11,15 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Services | GY-Décoration - Peintre intérieur à Annecy" />
     <meta property="og:description" content="Découvrez les services de GY-Décoration : peinture intérieure, décoration, préparation des supports et rafraîchissement à Annecy." />
-    <meta property="og:image" content="https://gy-decoration.fr/img/logo-gy.png" />
+    <meta property="og:image" content="https://gy-decoration.fr/img/og-image.jpg" />
     <meta property="og:url" content="https://gy-decoration.fr/services.html" />
     <meta property="og:locale" content="fr_FR" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Services | GY-Décoration - Peintre intérieur à Annecy" />
     <meta name="twitter:description" content="Découvrez les services de GY-Décoration : peinture intérieure, décoration, préparation des supports et rafraîchissement à Annecy." />
-    <meta name="twitter:image" content="https://gy-decoration.fr/img/logo-gy.png" />
+    <meta name="twitter:image" content="https://gy-decoration.fr/img/og-image.jpg" />
     <link rel="canonical" href="https://gy-decoration.fr/services.html" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="img/logo-gy.png" type="image/png" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -63,7 +58,7 @@
           style="max-width: 600px; margin: 16px auto 0; color: var(--gray-600)"
         >
           Des prestations sur mesure pour tous vos projets de peinture
-          intérieure et décoration à Annecy et en Haute-Savoie.
+          intérieure à Annecy et en Haute-Savoie.
         </p>
       </div>
     </section>
@@ -71,7 +66,7 @@
     <!-- SERVICES DETAIL -->
     <section class="section">
       <div class="container">
-        <div class="services-grid">
+        <div class="services-grid services-grid-center">
           <div class="service-card">
             <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-9"/><path d="M10 20v-6h4v6"/></svg></div>
             <h3>Peinture intérieure</h3>
@@ -89,15 +84,6 @@
               Conseil personnalisé pour le choix des teintes et harmonies de
               couleurs. Nous vous aidons à trouver les combinaisons idéales pour
               créer l'atmosphère que vous recherchez dans chaque pièce.
-            </p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><path d="M12 3c.6 3.2 2 4.6 5 5-3 .4-4.4 1.8-5 5-.6-3.2-2-4.6-5-5 3-.4 4.4-1.8 5-5Z"/><path d="M19 15c.2 1.2.8 1.8 2 2-1.2.2-1.8.8-2 2-.2-1.2-.8-1.8-2-2 1.2-.2 1.8-.8 2-2Z"/></svg></div>
-            <h3>Décoration intérieure</h3>
-            <p>
-              Pose de papier peint, effets décoratifs et finitions spéciales.
-              Créons ensemble des ambiances qui vous ressemblent et subliment
-              vos espaces de vie au quotidien.
             </p>
           </div>
           <div class="service-card">
@@ -131,8 +117,29 @@
       </div>
     </section>
 
-    <!-- PROCESS -->
+    <!-- PREPARATION -->
     <section class="section section-alt">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <img src="img/realisations/chantier-preparation.webp" alt="Chantier en cours : bandes et enduits sur plaques de plâtre avant peinture" width="1600" height="1200" loading="lazy" decoding="async" />
+          </div>
+          <div class="about-text">
+            <h2>Un beau résultat commence par la préparation</h2>
+            <p>
+              Bandes, enduits, ponçage, protection des sols et des menuiseries :
+              avant la première couche, chaque support est préparé avec soin.
+              C'est cette étape, souvent invisible, qui fait la différence sur
+              la tenue et le rendu final.
+            </p>
+            <a href="realisations.html" class="btn btn-outline">Voir les réalisations</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section">
       <div class="container">
         <div class="section-header">
           <h2>Notre méthode de travail</h2>
@@ -140,8 +147,7 @@
           <div class="line"></div>
         </div>
         <div
-          class="services-grid"
-          style="grid-template-columns: repeat(4, 1fr)"
+          class="services-grid services-grid-4"
         >
           <div class="service-card" style="text-align: center">
             <div class="service-icon" style="margin: 0 auto 20px; font-family: 'Fraunces', serif; font-weight: 600">01</div>
@@ -179,7 +185,7 @@
     </section>
 
     <!-- CTA -->
-    <section class="section">
+    <section class="section section-cta">
       <div class="container" style="text-align: center">
         <h2
           style="font-size: 2rem; color: var(--blue-900); margin-bottom: 16px"
@@ -211,8 +217,8 @@
               ><img src="img/logo-gy.png" alt=""
             /></a>
             <p>
-              Peintre intérieur à Annecy. Peinture et décoration d'intérieur
-              pour particuliers et professionnels.
+              Peintre intérieur à Annecy. Peinture intérieure pour particuliers
+              et professionnels.
             </p>
           </div>
           <div>

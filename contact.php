@@ -45,7 +45,6 @@ $sujet = "Nouvelle demande de devis - $prenom $nom";
 $servicesLabels = [
     'peinture-interieure' => 'Peinture intérieure',
     'mise-en-couleur' => 'Mise en couleur',
-    'decoration' => 'Décoration intérieure',
     'preparation' => 'Préparation des supports',
     'rafraichissement' => 'Rafraîchissement',
     'traitement' => 'Traitement des murs',
