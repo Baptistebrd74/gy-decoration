@@ -39,7 +39,7 @@ if (!empty($erreurs)) {
     exit;
 }
 
-$destinataire = 'gydecoration@gmail.com';
+$destinataire = 'gydecoration@proton.me';
 $sujet = "Nouvelle demande de devis - $prenom $nom";
 
 $servicesLabels = [

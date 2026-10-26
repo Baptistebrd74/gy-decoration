@@ -29,7 +29,7 @@ window.addEventListener('scroll', () => {
 });
 
 // ===== ANIMATION AU SCROLL =====
-const fadeElements = document.querySelectorAll('.service-card, .gallery-item, .about-content, .contact-wrapper, .ba');
+const fadeElements = document.querySelectorAll('.service-card, .gallery-item, .about-content, .contact-wrapper');
 
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -64,14 +64,6 @@ filterButtons.forEach(button => {
     galleryItems.forEach(item => {
       item.classList.toggle('is-hidden', filtre !== 'all' && item.dataset.cat !== filtre);
     });
-  });
-});
-
-// ===== AVANT / APRES =====
-document.querySelectorAll('.ba-frame').forEach(frame => {
-  const range = frame.querySelector('.ba-range');
-  range.addEventListener('input', () => {
-    frame.style.setProperty('--pos', range.value + '%');
   });
 });
 
@@ -120,22 +112,6 @@ if (lightbox && galleryItems.length) {
   lightbox.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') decaler(-1);
     if (e.key === 'ArrowRight') decaler(1);
-  });
-}
-
-// ===== CARTE GOOGLE MAPS (chargée seulement au clic, RGPD) =====
-const mapConsent = document.getElementById('mapConsent');
-
-if (mapConsent) {
-  mapConsent.querySelector('.map-consent-btn').addEventListener('click', () => {
-    const iframe = document.createElement('iframe');
-    iframe.src = mapConsent.dataset.src;
-    iframe.title = mapConsent.dataset.title;
-    iframe.loading = 'lazy';
-    iframe.referrerPolicy = 'no-referrer-when-downgrade';
-    iframe.allowFullscreen = true;
-    mapConsent.replaceChildren(iframe);
-    mapConsent.style.padding = '0';
   });
 }
 
