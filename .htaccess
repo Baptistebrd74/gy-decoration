@@ -5,6 +5,9 @@ RewriteEngine On
 # Anciennes adresses .html -> nouvelles pages .php (301 = déplacement définitif, Google suit)
 RewriteRule ^(index|services|realisations|a-propos|contact|mentions-legales)\.html$ /$1.php [R=301,L]
 
+# Dossier .git (historique du code, présent quand le site est déployé avec git clone) : interdit
+RewriteRule (^|/)\.git(/|$) - [F,L]
+
 # Fichiers sensibles : jamais servis, même si quelqu'un devine leur nom
 <FilesMatch "^(config\.php|config\.example\.php|\.user\.ini|.*\.(sqlite|md|sql))$">
   Require all denied
