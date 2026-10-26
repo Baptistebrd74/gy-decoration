@@ -1100,3 +1100,37 @@ img {
     padding: 60px 0;
   }
 }
+
+/* ===== TEXTES VENANT DE L'ADMIN ===== */
+.hero .page-intro {
+  max-width: 600px;
+  margin: 16px auto 0;
+  color: var(--gray-600);
+}
+
+.cta-texte {
+  color: var(--gray-600);
+  max-width: 500px;
+  margin: 0 auto 32px;
+}
+
+.texte-legal > div {
+  margin-bottom: 40px;
+}
+
+.texte-legal h2 {
+  font-size: 1.4rem;
+  color: var(--blue-900);
+  margin-bottom: 12px;
+}
+
+.texte-legal p {
+  color: var(--gray-600);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.texte-legal a {
+  color: var(--blue-700);
+  overflow-wrap: anywhere;
+}

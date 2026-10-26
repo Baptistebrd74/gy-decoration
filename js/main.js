@@ -143,7 +143,7 @@ if (contactForm) {
     submitBtn.disabled = true;
 
     try {
-      const response = await fetch('contact.php', {
+      const response = await fetch('envoi-contact.php', {
         method: 'POST',
         body: formData,
       });

@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /contact.php
-Disallow: /mentions-legales.html
+Disallow: /admin/
+Disallow: /envoi-contact.php
+Disallow: /mentions-legales.php
 
 Sitemap: https://gy-decoration.fr/sitemap.xml
