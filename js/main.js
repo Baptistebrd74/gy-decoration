@@ -154,7 +154,7 @@ if (contactForm) {
           <div style="text-align: center; padding: 40px 0;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="48" height="48" style="color: var(--blue-700); margin: 0 auto 16px;"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5.5-6"/></svg>
             <h3 style="color: var(--blue-900); margin-bottom: 12px;">Merci ${prenom} ${nom} !</h3>
-            <p style="color: var(--gray-600);">Votre demande de devis a bien été envoyée.<br>Nous vous recontacterons sous 24h.</p>
+            <p style="color: var(--gray-600);">Votre demande de devis a bien été envoyée.<br>Je vous recontacterai sous 24h.</p>
           </div>
         `;
         // Le message peut se retrouver hors écran sur un grand formulaire : on le ramène en vue
@@ -167,7 +167,7 @@ if (contactForm) {
     } catch (error) {
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;
-      afficherErreurFormulaire("Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous contacter par téléphone.");
+      afficherErreurFormulaire("Une erreur est survenue lors de l'envoi. Merci de réessayer ou de me contacter par téléphone.");
     }
   });
 }
