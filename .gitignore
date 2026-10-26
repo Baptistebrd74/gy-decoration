@@ -1,1 +1,9 @@
 .DS_Store
+
+# Identifiants de la base : jamais sur GitHub
+config.php
+# Base SQLite locale
+data/
+# Photos ajoutées depuis l'admin (vivent sur le serveur, pas dans le code)
+img/galerie/*
+!img/galerie/.htaccess

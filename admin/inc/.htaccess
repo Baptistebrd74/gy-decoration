@@ -1,0 +1,2 @@
+# Dossier interne : rien ne doit être accessible depuis le web
+Require all denied

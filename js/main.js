@@ -29,7 +29,7 @@ window.addEventListener('scroll', () => {
 });
 
 // ===== ANIMATION AU SCROLL =====
-const fadeElements = document.querySelectorAll('.service-card, .gallery-item, .about-content, .contact-wrapper, .ba');
+const fadeElements = document.querySelectorAll('.service-card, .gallery-item, .about-content, .contact-wrapper');
 
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -64,14 +64,6 @@ filterButtons.forEach(button => {
     galleryItems.forEach(item => {
       item.classList.toggle('is-hidden', filtre !== 'all' && item.dataset.cat !== filtre);
     });
-  });
-});
-
-// ===== AVANT / APRES =====
-document.querySelectorAll('.ba-frame').forEach(frame => {
-  const range = frame.querySelector('.ba-range');
-  range.addEventListener('input', () => {
-    frame.style.setProperty('--pos', range.value + '%');
   });
 });
 
@@ -123,22 +115,6 @@ if (lightbox && galleryItems.length) {
   });
 }
 
-// ===== CARTE GOOGLE MAPS (chargée seulement au clic, RGPD) =====
-const mapConsent = document.getElementById('mapConsent');
-
-if (mapConsent) {
-  mapConsent.querySelector('.map-consent-btn').addEventListener('click', () => {
-    const iframe = document.createElement('iframe');
-    iframe.src = mapConsent.dataset.src;
-    iframe.title = mapConsent.dataset.title;
-    iframe.loading = 'lazy';
-    iframe.referrerPolicy = 'no-referrer-when-downgrade';
-    iframe.allowFullscreen = true;
-    mapConsent.replaceChildren(iframe);
-    mapConsent.style.padding = '0';
-  });
-}
-
 // ===== FORMULAIRE CONTACT =====
 const contactForm = document.getElementById('contactForm');
 
@@ -167,7 +143,7 @@ if (contactForm) {
     submitBtn.disabled = true;
 
     try {
-      const response = await fetch('contact.php', {
+      const response = await fetch('envoi-contact.php', {
         method: 'POST',
         body: formData,
       });
@@ -178,7 +154,7 @@ if (contactForm) {
           <div style="text-align: center; padding: 40px 0;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="48" height="48" style="color: var(--blue-700); margin: 0 auto 16px;"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5.5-6"/></svg>
             <h3 style="color: var(--blue-900); margin-bottom: 12px;">Merci ${prenom} ${nom} !</h3>
-            <p style="color: var(--gray-600);">Votre demande de devis a bien été envoyée.<br>Nous vous recontacterons sous 24h.</p>
+            <p style="color: var(--gray-600);">Votre demande de devis a bien été envoyée.<br>Je vous recontacterai sous 24h.</p>
           </div>
         `;
         // Le message peut se retrouver hors écran sur un grand formulaire : on le ramène en vue
@@ -191,7 +167,7 @@ if (contactForm) {
     } catch (error) {
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;
-      afficherErreurFormulaire("Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous contacter par téléphone.");
+      afficherErreurFormulaire("Une erreur est survenue lors de l'envoi. Merci de réessayer ou de me contacter par téléphone.");
     }
   });
 }
