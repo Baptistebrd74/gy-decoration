@@ -1,5 +1,7 @@
 # ===== GY-Décoration : config Apache (o2switch) =====
 Options -Indexes
+# Adresse qui n'existe pas -> notre page 404 (avec le menu du site)
+ErrorDocument 404 /404.php
 RewriteEngine On
 
 # Anciennes adresses .html -> nouvelles pages .php (301 = déplacement définitif, Google suit)
